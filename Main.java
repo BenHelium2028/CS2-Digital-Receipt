@@ -23,7 +23,7 @@ public class Main {
       //variable initilization
       String companyName = "LLC Big Corp";
       double donutPrice = 2.51;
-      double codPrice = 12.3;
+      double codPrice = 12.0;
       double moundsBarPrice = 2.29;
       double coldDogPrice = 1.0;
       double drinkPrice = 47.32;
@@ -63,7 +63,7 @@ public class Main {
 
       System.out.println("*************************************************");
       System.out.println("*");
-      System.out.println("*       " + companyName + " receipt");
+      System.out.println("*       " + companyName + " receipt " + orderNumber);
       System.out.println("*");
       System.out.println("*       " + donutAmount + " Dounts " + donutPaying);
       System.out.println("*       " + codAmount + " Pacific Cods " + codPaying);
@@ -74,5 +74,7 @@ public class Main {
       System.out.println("*       " + "totalPrice " + totalPrice);
       System.out.println("*");
       System.out.println("*************************************************");
+
+      input.close();
    }
 }
