@@ -56,7 +56,12 @@ public class Main {
       int drinkAmount = input.nextInt();
       double drinkPaying = drinkAmount * drinkPrice;
 
-      double totalPrice = donutPaying + codPaying + moundsBarPaying + coldDogPaying + drinkPaying;
+      double taxRate = 0.11;
+
+      double subTotalPrice = donutPaying + codPaying + moundsBarPaying + coldDogPaying + drinkPaying;
+
+      double totalPrice = subTotalPrice*(1 + taxRate);
+      double totalPriceRounded = Math.round(totalPrice * 100.0) / 100.0;
 
 
       System.out.println(companyName + "receipt");
@@ -71,7 +76,8 @@ public class Main {
       System.out.println("*       " + coldDogAmount + " Cold Dogs " + coldDogPaying);
       System.out.println("*       " + drinkAmount + " \"Drinks\" " + drinkPaying);
       System.out.println("*");
-      System.out.println("*       " + "totalPrice " + totalPrice);
+      System.out.println("*       " + "Sub-Total Price: " + subTotalPrice);
+      System.out.println("*       " + "Total Price: " + totalPriceRounded);
       System.out.println("*");
       System.out.println("*************************************************");
 
